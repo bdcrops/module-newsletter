@@ -1,6 +1,6 @@
 # Newsletter-Magento2x
 
-Magento2x Newsletter overwrite with new field First Name, Last Name , Gender etc using plugin
+Magento2x Newsletter overwrite with new field First Name, Last Name , Gender etc using around plugin methods 
 
 
 Front End :
@@ -33,6 +33,9 @@ php bin/magento setup:static-content:deploy
 
 
 # Ref#
+
+https://devdocs.magento.com/guides/v2.3/extension-dev-guide/plugins.html
+
 https://mage2gen.com/
 
 https://github.com/astorm
