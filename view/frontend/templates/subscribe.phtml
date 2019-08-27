@@ -1,0 +1,51 @@
+<?php
+/**
+* @category BDCrops Inc.
+* @package BDC\Newsletter or bdc/module-newsletter
+* @author Abdul Matin <matinict@gmail.com / info@bdcrops.com >
+* @copyright Copyright (c) 2018 BDCrops, Ltd (http://www.bdcrops.com)
+* @license http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+
+?>
+<div class="block newsletter">
+  <div class="title"><strong><?php /* @escapeNotVerified */ echo __('Newsletter') ?></strong></div>
+  <div class="content">
+    <form class="form subscribe"
+          novalidate
+          action="<?php echo $block->escapeUrl($block->getFormActionUrl()) ?>"
+          method="post"
+          data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+          id="newsletter-validate-detail">
+      <div class="field firstname">
+        <label class="label" for="firstname"><span><?php echo $block->escapeHtml(__('First Name')) ?></span></label>
+        <div class="control">
+          <input name="firstname" type="text" id="firstname" placeholder="<?php echo $block->escapeHtmlAttr(__('First Name')) ?>"
+                 data-validate="{required:true}"/>
+        </div>
+      </div>
+      <div class="field lastname">
+        <label class="label" for="lastname"><span><?php echo $block->escapeHtml(__('Last Name')) ?></span></label>
+        <div class="control">
+          <input name="lastname" type="text" id="lastname" placeholder="<?php echo $block->escapeHtmlAttr(__('Last Name')) ?>"
+                 data-validate="{required:true}"/>
+        </div>
+      </div>
+      <?php $_gender = $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Gender') ?>
+      <?php echo $_gender->toHtml() ?>
+      <div class="field newsletter">
+        <label class="label" for="newsletter"><span><?php echo $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?></span></label>
+        <div class="control">
+          <input name="email" type="email" id="newsletter"
+                 placeholder="<?php echo $block->escapeHtmlAttr(__('Enter your email address')) ?>"
+                 data-validate="{required:true, 'validate-email':true}"/>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="action subscribe primary" title="<?php echo $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit">
+          <span><?php echo $block->escapeHtml(__('Subscribe')) ?></span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

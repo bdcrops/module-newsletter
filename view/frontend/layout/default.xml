@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category BDCrops Inc.
+* @package BDC\Newsletter or bdc/module-newsletter
+* @author Abdul Matin <matinict@gmail.com / info@bdcrops.com >
+* @copyright Copyright (c) 2019 BDCrops, Ltd (http://www.bdcrops.com)
+* @license http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="head.components">
+            <block class="Magento\Framework\View\Element\Js\Components" name="newsletter_head_components" template="Magento_Newsletter::js/components.phtml"/>
+        </referenceBlock>
+
+        <!--referenceContainer name="footer">
+            <block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"/>
+        </referenceContainer-->
+
+
+        <referenceContainer name="footer">
+          <referenceBlock name="form.subscribe" remove="true"/>
+            <block class="BDC\Newsletter\Block\Subscribe" name="form.custom.subscribe"  before="-" template="BDC_Newsletter::subscribe.phtml"/>
+
+            <!-- <block class="BDC\Newsletter\Block\Review" name="review.list" template="right-review.phtml">
+                <block class="Magento\Newsletter\Block\Subscribe" name="review_list_pager" as="review_list_pager"/>
+            </block> -->
+        </referenceContainer>
+    </body>
+</page>

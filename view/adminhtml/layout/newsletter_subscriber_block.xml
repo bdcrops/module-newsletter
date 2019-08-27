@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <body>
+    <referenceBlock name="adminhtml.newslettrer.subscriber.grid.columnSet">
+      <block class="Magento\Backend\Block\Widget\Grid\Column" as="custom_firstname">
+        <arguments>
+          <argument name="header" xsi:type="string" translate="true">First Name</argument>
+          <argument name="index" xsi:type="string">c_firstname</argument>
+          <argument name="header_css_class" xsi:type="string">col-firstname</argument>
+          <argument name="column_css_class" xsi:type="string">ccol-firstname</argument>
+        </arguments>
+      </block>
+      <block class="Magento\Backend\Block\Widget\Grid\Column" as="custom_lastname">
+        <arguments>
+          <argument name="header" xsi:type="string" translate="true">Last Name</argument>
+          <argument name="index" xsi:type="string">c_lastname</argument>
+          <argument name="header_css_class" xsi:type="string">col-lastname</argument>
+          <argument name="column_css_class" xsi:type="string">ccol-lastname</argument>
+        </arguments>
+      </block>
+      <block class="Magento\Backend\Block\Widget\Grid\Column">
+        <arguments>
+          <argument name="header" xsi:type="string" translate="true">Gender</argument>
+          <argument name="index" xsi:type="string">gender</argument>
+          <argument name="type" xsi:type="string">options</argument>
+          <argument name="options" xsi:type="array">
+            <item name="gender_male" xsi:type="array">
+              <item name="value" xsi:type="string">1</item>
+              <item name="label" xsi:type="string" translate="true">Male</item>
+            </item>
+            <item name="gender_female" xsi:type="array">
+              <item name="value" xsi:type="string">2</item>
+              <item name="label" xsi:type="string" translate="true">Female</item>
+            </item>
+            <item name="gender_not_specified" xsi:type="array">
+              <item name="value" xsi:type="string">3</item>
+              <item name="label" xsi:type="string" translate="true">Not Specified</item>
+            </item>
+          </argument>
+          <argument name="header_css_class" xsi:type="string">col-gender</argument>
+          <argument name="column_css_class" xsi:type="string">ccol-gender</argument>
+        </arguments>
+      </block>
+    </referenceBlock>
+  </body>
+</page>
