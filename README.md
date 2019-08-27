@@ -34,11 +34,15 @@ php bin/magento setup:static-content:deploy
 [![Total Downloads](https://poser.pugx.org/bdcrops/module-newsletter/downloads)](https://packagist.org/packages/bdcrops/module-newsletter)
 
 
+
 ### 2. Install via composer
+
+
 
 We recommend you to install BDC_Newsletter module via composer. It is easy to install, update and maintaince.
 
 Run the following command in Magento 2 root folder.
+
 
 #### 2.1 Install
 
