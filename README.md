@@ -2,8 +2,8 @@
 
 Magento2x Newsletter overwrite with new field First Name, Last Name , Gender etc using plugin
 
-Front End :
 
+Front End :
 
 ![Front End ](https://github.com/bdcrops/BDC_Newsletter/blob/master/view/frontend/web/images/newsletter-front.png)
 
